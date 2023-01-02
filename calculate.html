@@ -4,30 +4,34 @@
     <link href="javascript.js" rel="functions">
     <head>
         <script>
-            const p = sessionStorage.getItem('price');
-			
+            var price = sessionStorage.getItem("price");
+			var amount = sessionStorage.getItem("amount");
+			console.log(price, amount);
+
 			function load() {
                 var bar = document.getElementById("loading");
                 var width = 0;
                 var x = 0;
                 var id = setInterval(frame, 50);
                 function frame() {
-                    if (width >= 100) {
+                    console.log();
+					if (width >= 100) {
                         clearInterval(id);
 						setTimeout(redirect, 3000);
+						
 						function redirect() {
 					    window.location.href = "thanks.html";
 						const total = sessionStorage.setItem('total', total)
-						}
+						} 
 						
                     } else {
                         width++;
                         x = x + 0.2;
                         bar.style.width = width + '%';
                         document.getElementById("num").innerHTML = width * 1 + '%';
-                        document.getElementById("amount").innerHTML = x.toFixed(2) + 'L';
-						document.getElementById("cost").innerHTML = '€' + p.toFixed(2);
-                        document.getElementById("total").innerHTML = '€' + (x * p).toFixed(2);
+                        document.getElementById("amount").innerHTML = ((x * amount)/20).toFixed(2) + 'L';
+						document.getElementById("price").innerHTML = '€' + price;
+                        document.getElementById("total").innerHTML = '€' + ((x * price)/2).toFixed(2);
                     }
                 }
             }
@@ -45,7 +49,7 @@
                     <div class="col">
                         <h3>COST/LITRE:</h3>
                         <div class="wbox">
-
+							<p class="numbers" id="price">00.00</p>
                         </div>
                     </div>
                     <h4>=</h4>
