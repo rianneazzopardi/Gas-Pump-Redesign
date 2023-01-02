@@ -1,0 +1,46 @@
+<!-- Stephanie -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="change-pinJS.js"></script>
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="main.css">  <!--  adding stylesheet --> 
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'> <!--  adding font --> 
+     <script src="https://kit.fontawesome.com/7bc27e0ee3.js" crossorigin="anonymous"></script> <!-- adding font awesome stylesheet --> 
+    <title>Change pin </title>
+</head>
+<body>
+    
+  <section id="sec-p"> 
+      <div>
+        <h1 class="center">Please enter your new pin</h1> 
+  
+    </div>
+    
+    <div id="new-p-submit">
+      
+        
+        <input class="chinput" type="password"  id="new-p"  placeholder="New Pin" required><span onclick="hidea()">
+        <i id="hide1" class="fa fa-eye" aria-hidden="true"></i>
+        <i id="hide2" style="display: none;" class="fa fa-eye-slash" aria-hidden="true"></i>
+        </span><br>
+        
+        <input class="chinput" type="password" id="re-new-p" placeholder="Confirm Pin" required><span onclick="hideb()">
+        <i id="hide3" class="fa fa-eye" aria-hidden="true"></i>
+        <i id="hide4" style="display: none;" class="fa fa-eye-slash" aria-hidden="true"></i>
+        </span><br>
+        
+        
+        <button class="chbutton" id="save" onclick=newv()>Continue<i class="fa fa-long-arrow-right"></i></button> 
+        
+        <!-- ADD A BUTTON WHERE PASSWORD WAS NOT CHANGED SUCCESSFULLY TO THE PASSWORD CHANGED SUCCESSFULLY PAGE -->
+
+    </div>
+      
+</section> 
+</body>
+</html>

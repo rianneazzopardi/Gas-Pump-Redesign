@@ -1,0 +1,50 @@
+<!-- Rianne -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
+    <link rel="stylesheet" href="main.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+</head>
+<body>
+    <div>
+        <h1 class="center"><i class="fa fa-exclamation-triangle" style="font-size:64px"></i><br>Please wait</h1>
+    </div>
+    <div>
+        <h3 class="center">Your transaction is being verified</h3>
+    </div>
+
+    <div class="loader spinner"></div>
+    <input type='button' id='bt' 
+    	onclick='redirect_Page(this)' value='Fail Transaction'>
+
+    <script>
+        const myTimeout = setTimeout(function() {
+                    window.location.href = 'summary.html';
+                }, 5000);
+    </script>
+
+    <script>
+        let redirect_Page = (ele) => {
+    	
+        ele.value = 'Redirecting';
+        ele.disabled = true;
+        
+            let tID = setTimeout(function () {
+
+                // redirect page.
+                window.location.href = 'failure.html';
+                
+                window.clearTimeout(tID);
+                
+            }, 3000);
+        }
+    </script>
+
+</body>
+</html>
+

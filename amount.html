@@ -1,0 +1,47 @@
+<!-- Rianne -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
+    <link rel="stylesheet" href="main.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <script src='enter-amount.js'></script>
+    <meta charset="UTF-8">
+
+</head>
+<body>
+    <div>
+        <h1 class="center">Please enter the amount of petrol in <i class="fas fa-euro-sign"></i> you want to vend<br><i class='fas fa-gas-pump' style='font: size 50px'></i></h1>
+    </div> 
+    <div id="divOuter" class="form-center">
+        <div id="divInner">
+            <center><i class="fas fa-euro-sign" id="euro" style="font-size: 72px;"></i></center>
+            <input id="partitioned" type="text">
+            <div class="start" style="padding: 50px;">
+                <button id="myBtn" onclick="amount()" class="button">Done</button>
+            </div>
+        </div>
+    </div>
+    <!-- to find a way to make this store the value globally -->
+    <script>
+        var input = document.getElementById("partitioned");
+        input.addEventListener("keypress", function(event) {
+          if (event.key === "Enter") {
+            event.preventDefault();
+            amount(document.getElementById("partitioned").value);
+          }
+        });
+    </script>
+      
+    <div class="start" style="padding: 300px">
+        <a href="welcome.html">
+            <button class="button"><i class="fa fa-long-arrow-left"></i> Back</button>
+        </a>
+    </div>
+
+</body>
+</html>
+
+

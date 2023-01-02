@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+* {
+    font-family: 'Lato';
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.col {
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: -30px;
+}
+
+.Srow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.Prow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 850px;
+    margin: 110px 30px 0px 30px;
+}
+
+.Pcol {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: -20px;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-size: 40;
+    text-align: center;
+    margin-top: 50;
+}
+
+img.progress {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img.fuel {
+    margin-left: 20;
+}
+
+img.smile {
+    margin: 70px 0px 50px 0px;
+}
+
+button.norm {
+    margin: 70px 0px -20px 0px;
+    width: 120;
+    height: 50;
+    font-size: 50%;
+    border-radius: 8px;
+    border: none;
+    background-color: CBE5F9;
+}
+
+button.norm:hover {
+    background-color: #4597BB;
+}
+
+button.choice {
+    width: 200;
+    height: 300;
+    margin: 10px 20px -20px 20px;
+    font-size: 50%;
+    font-weight: bold;
+    border: none;
+    box-shadow: 3px 3px 3px lightgrey;
+}
+
+button.choice:hover, button.choice:focus {
+    background-color: #CBCCCD;
+}
+
+h1 {
+    font-size: 100;
+    margin: 0px 0px -20px 0px;
+}
+
+h2 {
+    font-size: 40;
+}
+
+h3 {
+    font-size: 30;
+    margin-top: 10;
+}
+
+h4 {
+    font-size: 100;
+    margin: 80px -100px -20px -100px;
+}
+
+h5 {
+    font-size: 30;
+    margin-top: -35px;
+}
+
+h6 {
+	font-size: 20;
+	margin: 20px 15px -10px 15px;
+}
+
+p.numbers {
+    font-size: 60;
+    margin-top: 15px;
+}
+
+p {
+    margin: 0px 0px -20px 0px;
+}
+
+div.box {
+    border-radius: 8px;
+    border: none;
+    background-color: D6D6D6;
+    width: 200;
+    height: 100;
+    margin: 10px 0px 0px 0px;
+}
+
+div.wbox {
+    border-radius: 8px;
+    border: none;
+    width: 200;
+    height: 100;
+    margin: 10px 0px 0px 0px;
+}
+
+div.sbox {
+    border-radius: 8px;
+    border: none;
+    width: 400;
+    height: 150;
+    margin-top: -10px;
+    margin-bottom: -30px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 3px 3px 3px lightgrey;
+}
+
+div.bar {
+    width: 10%;
+    height: 30px;
+    background-color: #808080;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+    width: 1100;
+    margin: -20px 30px 0px 55px;
+    border: none;
+    border-radius:12px ;
+}
+
+div.loading {
+    background-color: 45BB50;
+    height: 30px;
+    width: 0%;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+    border: none;
+    border-radius: 12px;
+}
+
+h7 {
+	font-size: 15;
+	text-align: left;
+ 
+}

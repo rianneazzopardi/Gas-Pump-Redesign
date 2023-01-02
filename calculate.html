@@ -1,0 +1,69 @@
+<html>
+<head>
+    <link href="CSS.css" rel="stylesheet">
+    <link href="javascript.js" rel="functions">
+    <head>
+        <script>
+            const p = sessionStorage.getItem('price');
+			
+			function load() {
+                var bar = document.getElementById("loading");
+                var width = 0;
+                var x = 0;
+                var id = setInterval(frame, 50);
+                function frame() {
+                    if (width >= 100) {
+                        clearInterval(id);
+						setTimeout(redirect, 3000);
+						function redirect() {
+					    window.location.href = "thanks.html";
+						const total = sessionStorage.setItem('total', total)
+						}
+						
+                    } else {
+                        width++;
+                        x = x + 0.2;
+                        bar.style.width = width + '%';
+                        document.getElementById("num").innerHTML = width * 1 + '%';
+                        document.getElementById("amount").innerHTML = x.toFixed(2) + 'L';
+						document.getElementById("cost").innerHTML = '€' + p.toFixed(2);
+                        document.getElementById("total").innerHTML = '€' + (x * p).toFixed(2);
+                    }
+                }
+            }
+        </script>
+        <body onload ="load()">
+            <div>
+                <div class=" row">
+                    <div class="col">
+                        <h3>AMOUNT:</h3>
+                        <div class="box">
+                            <p class="numbers" id="amount">00.00</p>
+                        </div>
+                    </div>
+                    <h4>x </h4>
+                    <div class="col">
+                        <h3>COST/LITRE:</h3>
+                        <div class="wbox">
+
+                        </div>
+                    </div>
+                    <h4>=</h4>
+                    <div class="col">
+                        <h3>TOTAL:</h3>
+                        <div class="box">
+                            <p class="numbers" id="total">00.00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="Pcol">
+                    <div class="Prow">
+                        <h3>Progress...</h3>
+                        <h3 id="num">0%</h3>
+                    </div>
+                    <div class="bar">
+                        <div id="loading" class ="loading"></div>
+                    </div>
+            </div>
+        </body>
+</html>

@@ -1,0 +1,109 @@
+
+<head>
+    <meta charset="utf-8">
+    <title>Homepage</title>
+    <script src="https://kit.fontawesome.com/7bc27e0ee3.js" crossorigin="anonymous"></script>
+  </head>
+
+
+ <body onload="emptyCode();"> <!-- calls the emptycode function when the web page is loaded -->
+
+<script type="text/javascript">
+function addCode(key){   // add code function. Adding the numbers of the keypad to the form to create the keypad  
+	var code = document.forms[0].code;  //SEE WHAT THIS IS
+    code.value = code.value + key;  //see old version on desktop to see how to do a limit on the amount of keys entered for password   
+}
+
+function submit() { //new function I made   
+    document.getElementById("message").style.display = "block";
+    setTimeout(submitForm,1000);	/* used to execute a function after waiting for the specified time interval. Submitform called here */       
+}  
+    
+    
+
+function submitForm(){
+	document.forms[0].submit();
+}
+
+function emptyCode(){ //empty code function
+	document.forms[0].code.value = "";
+}
+        
+function backspace() { //trial delete function
+   document.forms[0].code.value = document.forms[0].code.value.substring(0, document.forms[0].code.value.length - 1);
+} 
+    
+</script>
+<style>
+body {
+	text-align:center; 
+	/* background-color:#333333; */ /* colour of entire background */
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+}	
+#keypad {margin:auto; margin-top:20px;}
+    
+.display {   /* going to put display css before the keypad css. It doesnt make a difference */
+	width:130px; 
+	margin:10px auto auto auto; 
+	/* background-color:#666666; */  /* colour inside text box */
+    background-color:#D3D3D3;
+	/* color:#00FF00; */ /* colour of text of pin */
+    color:#666666;
+	font-size:18px;   
+	border:1px solid #999999;
+}
+
+#keypad tr td {
+	vertical-align:middle; 
+	text-align:center; 
+	/* border:1px solid #000000; */
+    /* border:1px solid #FFFFFF; */ /* see if i should add this or not */
+	font-size:18px; 
+	font-weight:bold; 
+	width:40px; 
+	height:30px; 
+	cursor:pointer; 
+	/* background-color:#666666; */ /* background colour of keypad */
+    /* color:#CCCCCC;*/ }           /* background colour of keys. Without this makes it black automatically */
+#keypad tr td:hover {background-color:#999999; color:#CBE5F9;}
+
+
+#message {
+	text-align:center; 
+	color:#009900; 
+	font-size:14px; 
+	font-weight:bold; 
+	display:none;
+}
+</style>
+
+
+     
+<form action="code.htm" method="get">   <!-- see what this is about. code.htm is the page it goes to  -->
+<input type="text" name="code" value="" maxlength="4" class="display" readonly="readonly" />   <!-- This fetches the text box. code is called here  -->
+<table id="keypad" cellpadding="5" cellspacing="3">
+	<tr>
+    	<td onclick="addCode('1');">1</td>  <!-- when you click 1 it adds 1 to the form --> 
+        <td onclick="addCode('2');">2</td>
+        <td onclick="addCode('3');">3</td>
+    </tr>
+    <tr>
+    	<td onclick="addCode('4');">4</td>
+        <td onclick="addCode('5');">5</td>
+        <td onclick="addCode('6');">6</td>
+    </tr>
+    <tr>
+    	<td onclick="addCode('7');">7</td>
+        <td onclick="addCode('8');">8</td>
+        <td onclick="addCode('9');">9</td>
+    </tr>
+    <tr>
+        <td onclick="backspace();"><i class="fa-solid fa-delete-left"></i></td> <!-- backspace button -->
+        <td onclick="addCode('0');">0</td> 
+        <td onclick="submit();"><i class="fa-solid fa-circle-check"></i></td> <!-- needs to be enter button #. Need to call a function that takes it to the next page -->
+    </tr>
+</table>
+<p id="message">ACCESSING...</p>
+</form>
+        
+</body>

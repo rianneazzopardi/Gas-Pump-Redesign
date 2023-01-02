@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <link href="CSS.css" rel="stylesheet">
+        <meta charset="UTF-8">
+    <head>
+
+    <script>
+		function storeGasType(type) {
+		var price;
+		
+		if (type == 'Diesel') price = 1.21;
+		else if(type == 'Petrol Regular') price = 1.35;
+		else if (type == 'Petrol Hi-Grade') price = 1.54;
+		
+		sessionStorage.setItem('price', price);
+		sessionStorage.setItem('type', type);
+
+		console.log(price);
+		console.log(type);
+		}
+    </script>
+    <body>
+        <div>
+            <h2>Please select your desired type of Gas: </h2>
+            <div class="row">
+                <button class="choice" onclick="storeGasType('Diesel')"><img class="fuel" src="images/black fuel.png" alt="Diesel" width="150"><br><br>Diesel</button>
+                <button class="choice" onclick="storeGasType('Petrol Regular')"><img class="fuel" src="images/green fuel.png" alt="Petrol" width="150"><br><br>Petrol Regular</button>
+                <button class="choice" onclick="storeGasType('Petrol Hi-Grade')"><img class="fuel" src="images/red fuel.png" alt="Hi-Grade" width="150"><br><br>Petrol Hi-Grade</button>
+			</div>
+            <a href="amount.html">
+				<button id="done" class="norm">Continue →</button>
+			</a>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,22 @@
+<!-- Stephanie -->
+
+button.norm {
+    margin: 70px 0px -20px 0px;
+    width: 120;
+    height: 50;
+    font-size: 50%;
+    border-radius: 8px;
+    border: none;
+    background-color: #CBE5F9;
+}
+
+button.choice {
+    width: 200;
+    height: 300;
+    margin: 10px 20px -20px 20px;
+    font-size: 50%;
+    font-weight: bold;
+    border: none;
+    box-shadow: 3px 3px 3px lightgrey;
+}
+

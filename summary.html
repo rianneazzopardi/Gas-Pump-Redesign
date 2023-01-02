@@ -1,0 +1,34 @@
+<html>
+	<head>
+		<link href="CSS.css" rel="stylesheet">
+		<meta charset="UTF-8">
+    <head>
+	<script>
+		const p = sessionStorage.getItem('price');
+		const total = sessionStorage.getItem('total');
+		const type = sessionStorage.setItem('type');
+
+		document.getElementById('showPr').innerHTML = p;
+		document.getElementById('showTo').innerHTML = total;
+		document.getElementById('showTy').innerHTML = type;
+	</script>
+        <body>
+            <div>
+                <img class="progress" src="images/checkmark.png" alt="SUCCESS" width="100">
+                <h2>Success!</h2>
+                <h5>Printing is complete.</h5>
+                <div class="sbox">
+						<div class ="Srow">
+							<h6 id = "showTy"></h6>
+							<h6 id = "showPr"></h6>
+						</div>
+
+						<h6><br>Total Amount</h6>
+						<h6 id = "showTo"></h6>
+				</div>
+                <a href = "calculate.html">
+					<button id="done" class="norm" onclick=>✓ Done</button>
+				</a>
+            </div>
+        </body>
+</html>

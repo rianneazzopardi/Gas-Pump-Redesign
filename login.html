@@ -1,0 +1,47 @@
+<!-- Stephanie -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="main.css">  <!--  adding stylesheet --> 
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'> <!--  adding font --> 
+   <script src="https://kit.fontawesome.com/7bc27e0ee3.js" crossorigin="anonymous"></script>  <!--  adding font awesome stylesheet--> 
+    <script src="loginJS.js"></script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+   
+
+    
+</head>
+         
+<body>
+    
+    <div class = "divlogin">
+        <p style="display: none;" id="error"></p>
+       
+        <h1 class="center">Please enter your pin</h1>
+        
+         
+        <input class="inputlogin" id="pass" type="password" placeholder="Enter Pin" required><span onclick="hide()">
+            <i id="hide1" class="fa fa-eye" aria-hidden="true"></i>
+            <i id="hide2" style="display: none;" class="fa fa-eye-slash" aria-hidden="true"></i>
+        </span><br> 
+        
+        <div class = "divbuttons"> 
+        <a href="welcome.html"> 
+        <button class="buttonlogin1"><i class="fa fa-long-arrow-left"></i>Back</button></a>
+        
+         <a href="changepin.html">
+            <button class="buttonlogin1">Forgot Pin</button></a> 
+        
+         <button class= "buttonlogin" onclick=log()>Continue<i class="fa fa-long-arrow-right"></i></button> 
+         
+    </div>
+        
+    </div>
+</body>
+</html>
