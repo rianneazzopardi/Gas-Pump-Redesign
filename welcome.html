@@ -11,28 +11,28 @@
 </head>
 <body>
     
-    
-     <script>
+    <script>
     let rPass =  1234; //setting passcode
      localStorage.setItem("password", rPass); 
     </script>
+    
     
     <div class="welcome">
         <p>Welcome to <br> ESR Gas !</p>
     </div>
     <div class="start">
-        <button class="button">Start</button>
+        <a href="amount.html">
+            <button class="button" onclick="amount.html">Start</button>
+        </a>
     </div>
 
     <br>
-   
-    
-     <div class="manager">
-         <a href="login.html">
-        <button class="welcome-button"><i class="fa fa-user" style="font-size:96px" aria-hidden="true"></i></button></a>
+    <div class="manager">
+        <a href="manager.html">
+            <button class="welcome-button"><i class="fa fa-user" style="font-size:96px" aria-hidden="true"></i></button>
+        </a>
         <p class = "manager-under">Manager Login</p>
     </div>
-    
-    
+
 </body>
 </html>
