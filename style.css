@@ -1,7 +1,7 @@
 /* Stephanie */
 
-/* this is the styling for the login page */
 
+/* css for login.html and login2.html */
 
 *{
     margin: 0; 
@@ -10,13 +10,12 @@
     text-decoration: none;  
 }
 
-
  .h1{  
     margin: 15px;
 } 
 
 .divlogin{ 
-    margin-top: 200px;    /* added just now */
+    margin-top: 200px;    
     border-radius: 10px;
     padding: 50px;
     margin-left: 50px;
@@ -25,7 +24,7 @@
 } 
 
 .divbuttons{ 
-    margin-top: 220px;    /* added just now */
+    margin-top: 220px;    
     
 } 
 
@@ -77,7 +76,7 @@
 
 
 
-/* css for change password. Was copied from ch.css */
+/* css for changepin.html */
 
 
 #sec-p{
@@ -106,7 +105,7 @@
 
 
 .chbutton{ 
-    margin: 50px 0px -20px 0px; 
+    margin: 285px 0px 0px -12px;
     border-radius: 8px; 
     background-color: #CBE5F9; 
     border: none;
@@ -118,7 +117,7 @@
 } 
 
 
-/* this is the styling for the manager page  */
+/* css for manager.html */
 
 .option{ 
     margin: 0;
@@ -136,7 +135,7 @@
 
 
 
-/* styling for prices.html */
+/* css for prices.html */
 
 
 #petrolheading, 
@@ -146,12 +145,12 @@
 }
 
 
-
 #dieselheading,
 #showdiesel
 {
     display: inline-block;
 }
+
 
 #higradeheading,
 #showhigrade
@@ -177,11 +176,10 @@ body
 }
 
 
-.manager2{  
+.prices{  
     float: left
     
 }
-
 
 .upperbutton{ 
     background-color: #CBE5F9;
@@ -195,7 +193,6 @@ body
      margin: 0px 0 0 285px;    
    
 }
-
 
 .main{
     width: 800px;
@@ -234,9 +231,7 @@ form{
 }
 
 
-
-
-/* styling for pricessuccess.html */
+/* css for pricessuccess.html */
 
 .donebutton{ 
     margin-top: 30px; 
@@ -266,13 +261,13 @@ form{
 }
 
 
-.field{ /* used for all the fields. */
+.field{ /* used for all the fields */
     position: relative;
     left: 200px;
     top: -29px;
     border-radius: 10px; 
     line-height: 30px;
-    padding: 0 2px; /*makes the fields smaller */
+    padding: 0 2px; 
     font-size: 16px;      
        
 }
@@ -294,7 +289,7 @@ form{
 }
 
 
-/* styling for transactionlog.html */
+/* css for transactionlog.html */
 
 #box { 
   background-color: #D9D9D9;
@@ -307,7 +302,10 @@ form{
 
 }
 
-
+.transactionlog{  
+    float: left
+    
+}
 
 .print-button{   
     background-color: D9D9D9;
@@ -319,7 +317,7 @@ form{
     width: 100px; 
     height: 93px; 
     position: relative; 
-    margin: 20px 0 0 285px;   
+    margin: 140px 0 0 285px;  
 }
 
 
@@ -339,11 +337,10 @@ form{
     text-align: center;
     padding: 15px 32px;
     position: relative; 
-    margin: 20px 0 0 490px; 
+    margin: 160px 0 0 490px; 
     
  
 }
-
 
 .headingname{
    margin: 10px 0 0 285px;   
