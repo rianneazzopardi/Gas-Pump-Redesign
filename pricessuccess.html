@@ -1,52 +1,52 @@
 <!-- Stephanie -->
 <html>
-    <head>
-         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="CSS.css" rel="stylesheet"> 
-        <link href="style.css" rel="stylesheet"> 
-    </head>
+ <head>
+        
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="CSS.css" rel="stylesheet"> 
+    <link href="style.css" rel="stylesheet"> 
+        
+ </head>
 
-    <body>
-        <div>
-            <img class ="progress" src="images/checkmark.png" alt="SUCCESS" width="200">
-            <h1>Success!</h1>
-            <p>Prices were set.</p><br>
-            
-            
-             <!-- show the prices --> 
+ <body>
      
+    <div>
+         
+    <img class ="progress" src="../images/checkmark.png" alt="SUCCESS" width="200">
+    <h1>Success!</h1>
+    <p>Prices were set.</p><br>
+            
+            
+    <!-- show the prices --> 
+     
+    <p id="petrolheading">Regular Petrol:</p>   
+    <p id="showregpetrol"></p><br>
+            
+    <p id="dieselheading"> Diesel:</p>
+    <p id="showdiesel"></p><br>
+            
+    <p id="higradeheading"> Hi-grade Petrol:</p>
+    <p id="showhigrade"></p><br>
 
-     <p id="petrolheading" style="font-size: 20px;">Regular Petrol:</p>   
-    <p id="showregpetrol" style="font-size: 20px;"></p><br>
-            
-    <p id="dieselheading" style="font-size: 20px;"> Diesel:</p>
-   <p id="showdiesel" style="font-size: 20px;"></p><br>
-            
-    <p id="higradeheading" style="font-size: 20px;"> Hi-grade Petrol:</p>
-    <p id="showhigrade" style="font-size: 20px;"></p><br>
 
-
-   
-        <script>
+    <script>
             
-         // retrieve 
-            
-            
-            document.getElementById("showregpetrol").innerHTML = localStorage.getItem("regularpetrol"); 
-             document.getElementById("showdiesel").innerHTML   = localStorage.getItem("diesel"); 
-             document.getElementById("showhigrade").innerHTML = localStorage.getItem("higradepetrol");
-            
-            
+    // retrieve the items from local storage  
+             
+    document.getElementById("showregpetrol").innerHTML = localStorage.getItem("regularpetrol"); 
+    document.getElementById("showdiesel").innerHTML   = localStorage.getItem("diesel"); 
+    document.getElementById("showhigrade").innerHTML = localStorage.getItem("higradepetrol");
+                   
            
-            </script>
+    </script>
       
             
-            <a href="thanks.html">  
-                <button id="done" class="norm" onclick=>✓ Done</button></a> 
+    <a href="thanks.html">  
+        <button id="done" class="norm" onclick=>✓ Done</button></a> 
             
 
-        </div>
+    </div>
        
-    </body>
+ </body>
 </html>
