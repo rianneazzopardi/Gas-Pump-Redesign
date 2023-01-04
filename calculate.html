@@ -2,10 +2,12 @@
 <head>
     <link href="CSS.css" rel="stylesheet">
     <link href="javascript.js" rel="functions">
+    <meta charset="UTF-8">
     <head>
         <script>
             var price = sessionStorage.getItem("price");
 			var amount = sessionStorage.getItem("amount");
+            var litres = amount/price;
 			console.log(price, amount);
 
 			function load() {
@@ -29,9 +31,9 @@
                         x = x + 0.2;
                         bar.style.width = width + '%';
                         document.getElementById("num").innerHTML = width * 1 + '%';
-                        document.getElementById("amount").innerHTML = ((x * amount)/20).toFixed(2) + 'L';
+                        document.getElementById("amount").innerHTML = ((x * litres)/20).toFixed(2) + 'L';
 						document.getElementById("price").innerHTML = '€' + price;
-                        document.getElementById("total").innerHTML = '€' + ((x * price)/2).toFixed(2);
+                        document.getElementById("total").innerHTML = '€' + amount;
                     }
                 }
             }
